@@ -35,3 +35,6 @@ export default {
   },
   externals:  [/^vendor\/.+\.js$/]
 };
+
+
+// 20351926
