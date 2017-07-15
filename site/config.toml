@@ -1,3 +1,40 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+googleAnalytics = "UA-xxxx"
+
+[params]
+description = "Comunidad Free Code Camp Montevideo"
+facebook= "https://www.facebook.com/freethe4"
+twitter = "https://twitter.com/freecleveland4"
+fundlink = "google.com"
+
+[[menu.main]]
+  name = "Home"
+  weight = -160
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "About"
+  weight = -150
+  identifier = "about-the-4"
+  url = "/about-the-4"
+[[menu.main]]
+  name = "Updates"
+  weight = -100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "Eventos"
+  weight = -110
+  identifier = "events"
+  url = "/events/"
+[[menu.main]]
+  name = "Nosotros"
+  weight = -120
+  identifier = "about"
+  url = "/about/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

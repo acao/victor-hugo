@@ -1,12 +1,13 @@
 backend:
   name: github
-  repo: acao/victor-hugo # Path to your Github repository
+  repo: <% GITHUB_REPOSITORY %> # Path to your Github repository
   branch: master # Branch to update
-media_folder: "images/uploads"
+media_folder: "site/static/img"
+public_folder: "img"
 collections:
   - name: "blog" # Used in routes, e.g. /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
+    folder: "site/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -14,5 +15,25 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "people" # Used in routes, e.g. /admin/collections/blog
+    label: "People" # Used in the UI
+    folder: "site/content/people" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "people"}
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Photo", name: "thumbnail", widget: "image"}
+      - {label: "Bio", name: "body", widget: "markdown"}
+      - {label: "Booklist", name: "booklist", widget: "url"}
+      - label: "Info"
+        name: "info"
+        widget: "object"
+        fields:
+          - {label: "Inmate Number", name: "text", widget: "string"}
+          - {label: "BOP Facility Name", name: "text", widget: "string"}
+          - {label: "BOP Facility Street Address", name: "text", widget: "string"}
+          - {label: "BOP Facility City", name: "text", widget: "string"}
+          - {label: "BOP Facility State", name: "text", widget: "string"}
+          - {label: "BOP Facility Zip", name: "text", widget: "string"}

@@ -1,3 +1,305 @@
 @import "imports/reset.css";
 @import "../../node_modules/skeleton-css/css/normalize.css";
 @import "../../node_modules/skeleton-css/css/skeleton.css";
+
+:root {
+  --dark-background-color: #2c3e50;
+  --light-text-color: #ecf0f1;
+  --primary-color: #e74c3c;
+
+  --facebook-color: #3B5998;
+  --facebook-color-hover: #304d8a;
+
+  --twitter-color: #55ACEE;
+  --twitter-color-hover: #35a2f4;
+
+  --github-color: #333;
+  --github-color-hover: #282727;
+
+  --youtube-color: #CC181E;
+  --youtube-color-hover: #bd0d13;
+
+  --border-color: #ccc;
+
+  --content-padding-top: 90px;
+
+  --small-media: 48em;
+  --medium-media: 64em;
+  --large-media: 75em;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+
+.content {
+  flex: 1;
+  padding-top: var(--content-padding-top);
+  min-height: calc(100vh - var(--content-padding-top));
+}
+
+.landing {
+}
+.section {
+  padding: 60px 10px;
+  text-align: center;
+  font-size: 1.3em;
+}
+.section.hero {
+  background-color: #018E85;
+  background-image: url('/img/home/background.jpg');
+  background-position: center;
+  background-size: cover;
+  color: var(--light-text-color);
+
+  height: 80vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -var(--content-padding-top);
+
+  & .heading {
+    padding: 80px 10px;
+  }
+
+  & .call-to-action {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 7px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background-color: color(var(--primary-color) lightness(+5%));
+      box-shadow: 0 6px 20px rgba(0,0,0,.3);
+    }
+  }
+}
+
+.facebook {
+  color: var(--facebook-color);
+  &:hover {
+    color: var(--facebook-color-hover);
+  }
+}
+.twitter {
+  color: var(--twitter-color);
+  &:hover {
+    color: var(--twitter-color-hover);
+  }
+}
+.github {
+  color: var(--github-color);
+  &:hover {
+    color: var(--github-color-hover);
+  }
+}
+.youtube {
+  color: var(--youtube-color);
+  &:hover {
+    color: var(--youtube-color-hover);
+  }
+}
+
+.section.footer {
+  background-color: var(--dark-background-color);
+}
+
+/* Navigation */
+
+.navigation {
+  background-color: var(--dark-background-color);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  & .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin: 8px 30px;
+    /*display: none;*/
+
+    & li {
+      float: left;
+      position: relative;
+      margin: 0 3px;
+    }
+  }
+
+  & .logo {
+    color: var(--light-text-color);
+    font-size: 35px;
+    float: left;
+    padding: 3px 16px;
+    display: inline-block;
+  }
+
+  & .item {
+    color: var(--light-text-color);
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 1.1em;
+    min-width: 65px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: #6aaef4;
+      transition: width .25s;
+    }
+
+    &:hover, &.active {
+      color: #6aaef4;
+    }
+    &:hover::before, &.active::before {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .navigation {
+    display: flex;
+
+    & .menu {
+      margin: 8px 0px;
+      overflow-x: scroll;
+      display: flex;
+    }
+  }
+}
+
+
+/*
+  Blog
+*/
+
+.blog-container {
+  padding: 0 1em;
+}
+
+.blog-categories {
+  text-align: center;
+
+  & .category-link {
+    display: inline-block;
+    padding: 3px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    margin-bottom: 1em;
+
+    &.active, &:hover {
+      background-color: #6aaef4;
+      color: var(--light-text-color);
+    }
+  }
+}
+
+.blog-posts {
+  padding: 1em 0;
+}
+
+.post {
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+  text-align: left;
+
+  & a.post-title{
+    font-size: 2.2em;
+    line-height: normal;
+  }
+
+  & .post-title h1 {
+    margin-bottom: 5px;
+  }
+
+  & .post-meta {
+    font-style: italic;
+    margin-top: 10px;
+
+    & .author-avatar {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+  }
+
+  & .post-summary {
+    margin-top: 1em;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  & .post-content {
+    margin-top: 2em;
+
+    & p {
+      font-size: 1.1em;
+    }
+
+    & img {
+      width: 100%;
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+      &.inline-image {
+        height: 30px;
+        width: auto;
+        vertical-align: middle;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.post-comments {
+  padding: 0 1em;
+  margin-bottom: 2em;
+}
+
+.blog-sidebar {
+  display: none;
+}
+
+
+/* Footer styles */
+.section.footer {
+  & .footer-heading {
+    color: var(--light-text-color);
+  }
+
+  & .footer-links {
+    margin-bottom: 25px;
+
+    & p {
+      margin: 0;
+    }
+  }
+}

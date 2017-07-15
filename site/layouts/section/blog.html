@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="row blog-container">
+    <section class="col-xs-12 col-sm-8 col-md-8 blog-content">
+        <div class="blog-posts">
+        {{if ge (len .Data.Pages) 1 }}
+            {{ range first 10 .Data.Pages }}
+                <div class="post">
+                    <a href="{{ .RelPermalink }}" class="post-title">
+                        {{ .Title }}
+                    </a>
+
+                    {{ partial "post-meta.html" . }}
+
+                    <div class="post-summary">
+                        <p>{{ .Params.Description }}</p>
+
+                        <span class="read-more-link">
+                            <a href="{{ .RelPermalink }}">Leer mas..</a>
+                        </span>
+                    </div>
+                </div>
+            {{end}}
+        {{end}}
+        </div>
+    </section>
+
+    <aside class="col-xs-12 col-sm-4 col-md-4 blog-sidebar">
+
+    </aside>
+</div>
+
+{{ end }}
