@@ -24,7 +24,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "people"}
       - {label: "Name", name: "title", widget: "string"}
-      - {label: "Photo", name: "thumbnail", widget: "image"}
+      - {label: "Main Photo", name: "thumbnail", widget: "image"}
       - {label: "Bio", name: "body", widget: "markdown"}
       - {label: "Booklist", name: "booklist", widget: "string"}
       - {label: "Writing Instructions", name: "writing_info", widget: "text"}
@@ -38,3 +38,9 @@ collections:
           - {label: "Prison City", name: "p_city", widget: "string"}
           - {label: "Prison State", name: "p_state", widget: "string"}
           - {label: "Prison Zip", name: "p_zip", widget: "string"}
+      - label: "Extra Photos"
+        name: "photos"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Caption", name: "caption", widget: "string"}
