@@ -1,5 +1,5 @@
 ---
-name: 'Connor Stephens'
+title: 'Connor Stephens'
 ---
 
 sdfdsfdsfds
