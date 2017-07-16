@@ -1,5 +1,5 @@
 ---
-title: About
+title: About The 4
 page: /about-the-4.html
 heading: Sobre Nosotros
 draft: false

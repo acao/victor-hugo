@@ -17,24 +17,10 @@ fundlink = "google.com"
 [[menu.main]]
   name = "About"
   weight = -150
-  identifier = "about-the-4"
+  identifier = "about"
   url = "/about-the-4"
 [[menu.main]]
   name = "Updates"
   weight = -100
   identifier = "blog"
   url = "/blog/"
-[[menu.main]]
-  name = "Eventos"
-  weight = -110
-  identifier = "events"
-  url = "/events/"
-[[menu.main]]
-  name = "Nosotros"
-  weight = -120
-  identifier = "about"
-  url = "/about/"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"

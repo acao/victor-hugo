@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutoriales on My New Hugo Site</title>
+    <link>/categories/tutoriales/</link>
+    <description>Recent content in Tutoriales on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Feb 2017 14:35:30 -0300</lastBuildDate>
+    
+	<atom:link href="/categories/tutoriales/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como crear un articulo para el blog</title>
+      <link>/blog/example/</link>
+      <pubDate>Sun, 26 Feb 2017 14:35:30 -0300</pubDate>
+      
+      <guid>/blog/example/</guid>
+      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+
+&lt;p&gt;Para crear un artículo o post hay dos maneras que podrás optar según sea el caso, una forma es utilizar la interfaz de GitHub para crear el archivo correspondiente al post, y la otra es teniendo el código en tu maquina y trabajando de forma local. Todo dependerá de tus preferencias y como te sientas mas cómodo trabajando.&lt;/p&gt;
+
+&lt;h3 id=&#34;crear-mediante-github&#34;&gt;Crear mediante GitHub&lt;/h3&gt;
+
+&lt;p&gt;Esta es la manera mas directa ya que no requiere tener el código en tu máquina y por ende no es necesario instalar nada.&lt;/p&gt;
+
+&lt;h5 id=&#34;realizar-un-fork-del-repositorio-de-fccmontevideo-com&#34;&gt;Realizar un fork del repositorio de fccmontevideo.com&lt;/h5&gt;
+
+&lt;p&gt;Lo primero que debes hacer es navegar al &lt;strong&gt;&lt;a href=&#34;https://github.com/FreeCodeCampMontevideo/fccmontevideo.com&#34;&gt;repo&lt;/a&gt;&lt;/strong&gt; y darle al botón &lt;img class=&#34;inline-image&#34; src=&#34;/img/fork-button.png&#34;&gt; que aparece en la parte superior derecha, para esto es necesario que tengas con una cuenta de GitHub, si aún no tienes este es un buen momento para &lt;strong&gt;&lt;a href=&#34;https://github.com/join&#34;&gt;registrarte&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h5 id=&#34;crear-archivo-y-escribir-tu-post&#34;&gt;Crear archivo y escribir tu post&lt;/h5&gt;
+
+&lt;p&gt;Luego deben navegar hacia la carpeta &lt;code&gt;site/content/blog&lt;/code&gt; del repositorio y darle al botón &lt;img class=&#34;inline-image&#34; src=&#34;/img/create-new-file-button.png&#34;&gt; para crear tu post, esto abrirá una ventana donde tienes que escribir el contenido en formato &lt;strong&gt;&lt;a href=&#34;https://guides.github.com/features/mastering-markdown/&#34;&gt;markdown&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes de comenzar a escribir el articulo como tal debes especificar ciertos datos necesarios para que todo funcione correctamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post-metadata.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso se puede apreciar que tengo que especificar el nombre del archivo a crear &lt;code&gt;nombre-post.md&lt;/code&gt; en minusculas y separando cada palabra con &lt;code&gt;-&lt;/code&gt; e indicar algunos datos necesarios para el post, esta información es la que aparece entre los signos de &lt;code&gt;---&lt;/code&gt; (frontmatter)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;title: titulo del post&lt;/li&gt;
+&lt;li&gt;date: fecha de creación del post&lt;/li&gt;
+&lt;li&gt;draft: si el post es un borrador o no&lt;/li&gt;
+&lt;li&gt;author: nick del autor del post &lt;strong&gt;(&lt;a href=&#34;#configurar-autor&#34;&gt;configurar autor&lt;/a&gt;)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;categories (opcional): lista categorías para el post&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
