@@ -1,10 +1,10 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Cleveland 4 Solidarity"
 googleAnalytics = "UA-xxxx"
 
 [params]
-description = "Comunidad Free Code Camp Montevideo"
+description = "Cleveland 4 Solidarity"
 facebook= "https://www.facebook.com/freethe4"
 twitter = "https://twitter.com/freecleveland4"
 fundlink = "google.com"
